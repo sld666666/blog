@@ -10,7 +10,7 @@
 第一点用Makrdown来写文档是一个非常好的选择，第二点自然想到了git，
 第三点用一个静态的网站来浏览和管理是一个不错的选择，这里选择了hugo。
 
-Hugo是由Go语言实现的静态网站生成器。 注意试试生成器。他虽然自带webserver，但是没有Nigix强大了。
+Hugo是由Go语言实现的静态网站生成器。 注意是生成器。他虽然自带webserver，但是没有Nigix强大了。
 他能非常方便的把markdown文件转换为html。
 
 
@@ -107,3 +107,5 @@ class EntranceHttpRequestHandler(http.server.CGIHTTPRequestHandler):
 ```
 其中Convert 是对文档做一些分类和tag的转换不想起介绍。
 到现在一个完整的网站就搭建完成了，每一次只要在本地push文档，就能在网站上自动更新。
+
+完整代码看[这里](https://github.com/sld666666/PythonProject/tree/master/hugo_convertor)
