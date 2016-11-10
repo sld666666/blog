@@ -112,3 +112,6 @@ class EntranceHttpRequestHandler(http.server.CGIHTTPRequestHandler):
 
 如果80端口不可用，则:
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+
+发现 xshell 关闭 程序退出：
+nohup python3 Main.py
