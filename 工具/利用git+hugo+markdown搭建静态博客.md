@@ -21,7 +21,7 @@ Hugo是由Go语言实现的静态网站生成器。 注意是生成器。他虽�
 ### 第一步： 安装hugo
 
 1. 首先检查系统的版本：cat /proc/version
-2. 直接用 sudo yum install hugo 发现不行，只能字节选择本机安装了
+2. 直接用 sudo yum install hugo 发现不行，只能选择本机安装了
 3. 当然发现少了一个能上传的客户端： yum install lrzsz
 4. 因为是radhat，用hugo-0.16-2.el6.x86_64.rpm 包，然后sudo yum install hugo-0.16-2.el6.x86_64.rpm
 
@@ -44,7 +44,7 @@ Hugo是由Go语言实现的静态网站生成器。 注意是生成器。他虽�
 
  首先在github上配置请求：settings->Webhooks
 
- 然后我们要在外面的服务器上搭建一个Http服务器来接受这个请求， 这里选择用python的import http.server来大家，简单方便：
+ 然后我们要在外面的服务器上搭建一个Http服务器来接受这个请求， 这里选择用python的import http.server来搭建，简单方便：
 
 ```
 class EntranceHttpRequestHandler(http.server.CGIHTTPRequestHandler):
@@ -105,7 +105,10 @@ class EntranceHttpRequestHandler(http.server.CGIHTTPRequestHandler):
         print('stopHugo finished')
 
 ```
-其中Convert 是对文档做一些分类和tag的转换不想起介绍。
+其中Convert 是对文档做一些分类和tag的转换不详细介绍。
 到现在一个完整的网站就搭建完成了，每一次只要在本地push文档，就能在网站上自动更新。
 
 完整代码看[这里](https://github.com/sld666666/PythonProject/tree/master/hugo_convertor)
+
+如果80端口不可用，则:
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
