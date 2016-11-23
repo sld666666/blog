@@ -1,4 +1,4 @@
-
+hugo server --buildDrafts  -p 8080 --bind 100.69.199.93 -b http://100.69.199.93:8080/
 
 # 利用git+hugo+markdown  搭建一个静态网站
 
