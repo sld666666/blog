@@ -32,10 +32,13 @@ def hist(x, bins=10, range=None, normed=False, weights=None, cumulative=False,
   plt.show()
   ```
   ![hist_bins_define](https://img.alicdn.com/imgextra/i1/46754672/TB2_T9Jek1M.eBjSZPiXXawfpXa_!!46754672.png)
+
 ## range
+
 柱子的上下范围。,数组
 
 ## weights
+
 柱子的y值
 
   ```
@@ -47,7 +50,9 @@ def hist(x, bins=10, range=None, normed=False, weights=None, cumulative=False,
  ![hist_weight_define](https://img.alicdn.com/imgextra/i4/46754672/TB2TgOseiKO.eBjSZPhXXXqcpXa_!!46754672.png)
 
  ## bottom
+
  从哪里开始，一般不用设置
 
  ## histtype
+
  {‘bar’, ‘barstacked’, ‘step’, ‘stepfilled’}, optional
