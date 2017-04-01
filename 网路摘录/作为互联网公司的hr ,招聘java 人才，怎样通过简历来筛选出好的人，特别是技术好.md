@@ -1,0 +1,2 @@
+##1
+看简历单词，如果只看到struts、spring、hibernate、ibatis之类，没有看到asm、osgi、netty、mina、grails之类的一般都是菜鸟。看到hadoop，但没提到hdfs、spark、zookeeper、hbase、pig、hive薪酬要求不高的，一般就只懂一个单词。会开发开发工具的，技术差不到哪去；懂字节码，p-code，逆向工程，交换内存，会用stream的都是高手。okay，看到评论中的内容之后，我打算补充下为什么：spring、hibernate等大多数框架（Nutz）的源码就引用了asm，看spring源码肯定需要懂这个，不然你怎么看得懂？源码都没看懂技术会好吗？netty（or mina）是做网络编程比较优秀且著名的框架，做java只会http，那人家要你写一个网络传输的，高性能的，你又不知道如何是好了。osgi，eclipse就是基于osgi的，你写代码的时候不想想怎么改良自己的开发工具吗？只知道一味的写代码？没想过怎么发明一个工具把大量的工作交给电脑去做？人和动物的区别是什么？制造和使用工具。grails是目前spring体系里最快的开发方式，至少得了解和尝试一下吧？
