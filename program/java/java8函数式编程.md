@@ -78,9 +78,9 @@ public class StreamTestor {
 ```
  collect(toList()) 方法从 Stream 中生成一个列表
 
- ### map
+### map
 
- ```
+```
      public void normalUpper(){
         List<String> collected = new ArrayList<>();
         for (String string : Arrays.asList("a", "b", "hello")) {
@@ -98,11 +98,11 @@ public class StreamTestor {
         System.out.println(collected);
     }
 
- ```
+```
 
  map接受一个参数，返回一个值。 如果看下map的入参， 我们可以发现参数必须是 Function 接口的实现。Function接口是包含一个参数的普通接口。
 
- ## min 和 max
+## min 和 max
 
  ```
 
@@ -133,7 +133,7 @@ public class StreamTestor {
  他接受一个函数，返回另一个函数。
  
 
- ### 组合
+### 组合
 函数式编程的一个重要好处是能把功能分解为很小的部分，但是非常易于组合，而且组合起来威力强大。
  ```
  Set<String> origins = album.getMusicians()

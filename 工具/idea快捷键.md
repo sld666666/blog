@@ -8,4 +8,4 @@
 - Ctrl+h，显示类结构图（类的继承层次）. 可以看类有多少个子类
 - Ctrl+u 转到父类
 - scroll from source : atl+F1
-- 
+- ctrl+atl+l:  源码格式化
