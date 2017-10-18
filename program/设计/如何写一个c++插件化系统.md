@@ -38,7 +38,7 @@ d: 可替换性和可扩展性差
 2). 运行时候能动态安装、启动、停在、卸载  
 3). 每一个插件提供一个或多个服务，其他插件是根据接口来获取服务提供者
 
-## 4\. 一个插件化系统应该是怎么构成的
+## 4. 一个插件化系统应该是怎么构成的
 
 OSGI，Java中影响力最大的插件化系统就是OSGI标准  
 OSGI的定义：The dynamic module system for java  
@@ -54,7 +54,7 @@ OSGI的定义：The dynamic module system for java
 
 4、 服务的管理。
 
-##  5\. 一个简单场景的随想
+##  5. 一个简单场景的随想
 
 比如设计下如下的游戏场景：一个RPG游戏， 玩家控制一个英雄，在场景中有不同的怪物，而且随着游戏的更新，  
 英雄等级的提升又会有不同的怪物出现， 这里就想把怪物设计为插件。  
@@ -68,10 +68,10 @@ OSGI的定义：The dynamic module system for java
                                , public IRole {
           virtual    cptf ::ulong attack() = 0;
     };
-    
+
     interfacecptf IOgre : public cptf ::core:: IDispatch
                                , public IRole {
-    
+
     };
 
 然后作为插件我需要实现一个Hero， 和多个Ogre
@@ -79,11 +79,11 @@ OSGI的定义：The dynamic module system for java
     class Hero : public ServiceCoClass<Hero >
                     , public ObjectRoot <SingleThreadModel>
                     , public cptf ::core:: IDispatchImpl<IHero >{
-    
+
     class Wolf : public ServiceCoClass<Wolf >
                                , public ObjectRoot<SingleThreadModel >
                                , public cptf::core ::IDispatchImpl< IOgre>
-    
+
     class Tiger : public ServiceCoClass<Tiger >
                                , public ObjectRoot<SingleThreadModel >
                                , public cptf::core ::IDispatchImpl< IOgre>　
@@ -95,11 +95,11 @@ OSGI的定义：The dynamic module system for java
           hero_ = static_cast<IHero *>(serviceContainer_. getService(Hero_CSID , IHero_IID));
           if (!hero_ )return;
           printHero(hero_ );
-    
+
           list<IService *> services = serviceContainer_ .getServices( IOgre_IID);
           list<IOgre *> ogres = CastUtils::parentsToChildren <IService, IOgre>(services );
           for_each(ogres .begin(), ogres.end (), bind(&BattleMannager ::printOgre, _1));
-    
+
           services = serviceContainer_ .getServices( IHumanOgre_IID);
           list<IHumanOgre *> hummanOgres = CastUtils::parentsToChildren <IService, IHumanOgre>(services );
           for_each(hummanOgres .begin(), hummanOgres.end (), bind(&BattleMannager ::printHumanOgre, _1));
@@ -168,7 +168,7 @@ Hero() 这样动作。
                           break;
                     }
                }
-    
+
                 return rtn ;
          }
 
@@ -238,5 +238,5 @@ Hero() 这样动作。
 posted @ 2014-01-14 17:49 [sld666666](http://www.cnblogs.com/sld666666/)
 阅读(...) 评论(...) [编辑](https://i.cnblogs.com/EditPosts.aspx?postid=3519467) 收藏
 
-##备注 
+##备注
  @post in:2014-01-14 17:49
