@@ -28,6 +28,7 @@
 2. mkdir -p /data/db
 
 ## 使用
+1. 启动以后输入http://127.0.0.1:28017 查看状态
 3. 创建数据库： use book
 4. 查看数据库: show dbs
 5. 插入： db.book.insert({"name":"sld"})// 看这是mogodb的文档
