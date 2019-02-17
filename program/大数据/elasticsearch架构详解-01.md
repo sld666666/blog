@@ -15,8 +15,26 @@ http://localhost:5601/app/sense
 
 
 Relational DB -> Databases -> Tables -> Rows -> Columns
-Elasticsearch -> Indices   -> Types  -> Documents -> Fields
+Elasticsearch -> Indices   -> Types  -> Documents ->
 
-## 最佳新人奖
-提名： 崔国存
-理由： 
+举个例子：
+
+```
+curl -X PUT "localhost:9200/megacorp/employee/1" -H 'Content-Type: application/json' -d'
+{
+    "first_name" : "John",
+    "last_name" :  "Smith",
+    "age" :        25,
+    "about" :      "I love to go rock climbing",
+    "interests": [ "sports", "music" ]
+}
+'
+```
+- megacorp 索引名称
+- employee 类型名称
+- 1 雇员id
+
+查询
+```
+curl -X GET "localhost:9200/megacorp/employee/_search?q=last_name:Smith"
+```
